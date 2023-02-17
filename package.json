@@ -5,18 +5,27 @@
 	"description": "",
 	"packageManager": "pnpm@7.27.0",
 	"scripts": {
-		"clear": "rm -rf ./packages/*/node_modules",
+		"clear": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
+		"commit": "pnpm cz",
 		"version": "pnpx changeset version",
 		"publish": "pnpx changeset publish --registry=https://registry.npmjs.com/",
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
-		"build": "pnpm --filter=@console/* run build && pnpm clear",
-		"release": "pnpm build && pnpx changeset && pnpm version && pnpm publish"
+		"build": "pnpm --filter=@console/* run build",
+		"release": "pnpm build && pnpm changeset && pnpm version && pnpm publish"
 	},
 	"keywords": [],
 	"author": {
 		"email": "zhangjing1024798@gmail.com",
 		"name": "zhangjing"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChuTingzj/console-lib"
+	},
+	"bugs": {
+		"url": "https://github.com/ChuTingzj/console-lib/issues"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.26.0",
@@ -25,11 +34,18 @@
 		"@types/node": "^18.13.0",
 		"@typescript-eslint/eslint-plugin": "^5.52.0",
 		"@typescript-eslint/parser": "^5.52.0",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.34.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.2",
 		"prettier": "^2.8.4",
 		"typescript": "^4.9.5"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
 	},
 	"lint-staged": {
 		"*.ts": [

@@ -1,5 +1,5 @@
-import { resolve } from 'path'
-import * as webpack from 'webpack'
+import { resolve } from 'path';
+import type { Configuration } from 'webpack';
 module.exports = () => {
   return {
     target: 'node',
@@ -31,7 +31,7 @@ module.exports = () => {
               loader: 'babel-loader',
               options: {
                 presets: ['@babel/preset-env', '@babel/preset-typescript'],
-                plugins: ["@babel/plugin-transform-typescript"]
+                plugins: ['@babel/plugin-transform-typescript']
               }
             },
             {
@@ -41,5 +41,5 @@ module.exports = () => {
         },
       ]
     }
-  } satisfies webpack.Configuration
-}
+  } satisfies Configuration;
+};
