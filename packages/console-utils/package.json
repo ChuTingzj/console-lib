@@ -6,6 +6,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"preinstall": "pnpx only-allow pnpm",
 		"build": "webpack --progress",
