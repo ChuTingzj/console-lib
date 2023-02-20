@@ -7,8 +7,8 @@
 	"scripts": {
 		"clear": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
 		"commit": "pnpm cz",
-		"version": "pnpx changeset version",
-		"publish": "pnpx changeset publish --registry=https://registry.npmjs.com/",
+		"version": "pnpm changeset version",
+		"publish": "pnpm changeset publish --registry=https://registry.npmjs.com/",
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
 		"build": "pnpm --filter=@console/* run build",
