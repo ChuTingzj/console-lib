@@ -3,7 +3,7 @@
 	"changelog": "@changesets/cli/changelog",
 	"commit": false,
 	"fixed": [],
-	"linked": [["@console/*"]],
+	"linked": [["@console1024/*"]],
 	"access": "public",
 	"baseBranch": "master",
 	"updateInternalDependencies": "patch",
