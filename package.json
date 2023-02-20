@@ -8,11 +8,11 @@
 		"clear": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
 		"commit": "git add . && pnpm cz",
 		"version": "pnpm changeset version",
-		"publish": "pnpm changeset publish --registry=https://registry.npmjs.com/",
+		"publish": "pnpm changeset publish --registry=https://registry.npmjs.com/ --access public",
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
 		"build": "pnpm --filter=@console1024/* run build",
-		"release": "pnpm changeset && pnpm version && pnpm build && pnpm publish --filter=@console1024/*"
+		"release": "pnpm changeset && pnpm version && pnpm build && pnpm publish -r"
 	},
 	"keywords": [],
 	"author": {
