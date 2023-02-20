@@ -12,7 +12,7 @@
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
 		"build": "pnpm --filter=@console/* run build",
-		"release": "pnpm build && pnpm changeset && pnpm version && pnpm publish"
+		"release": "pnpm build && pnpm changeset && pnpm version && pnpm publish -r"
 	},
 	"keywords": [],
 	"author": {
