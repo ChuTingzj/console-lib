@@ -1,14 +1,13 @@
 {
 	"name": "monorepo",
 	"version": "1.0.0",
-	"private": "true",
 	"description": "",
 	"packageManager": "pnpm@7.27.0",
 	"scripts": {
 		"clear": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
 		"commit": "git add . && pnpm cz",
 		"version": "pnpm changeset version",
-		"publish": "pnpm changeset publish --registry=https://registry.npmjs.com/ --access public",
+		"publish": "pnpm changeset publish --registry=https://registry.npmjs.com/",
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
 		"build": "pnpm --filter=@console1024/* run build",
