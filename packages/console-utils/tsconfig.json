@@ -33,7 +33,7 @@
 		"sourceMap": true,
 		"declaration": true,
 		"emitDeclarationOnly": false,
-		"declarationDir": "dist",
+		"declarationDir": "./dist",
 
 		/* Interop Constraints */
 		//当一个模块没有默认导出时，允许'import x from y'。
@@ -62,14 +62,9 @@
 		"tests/**/*.ts",
 		"src/**/*.ts",
 		"src/**/*.d.ts",
-		"src/**/*.tsx",
 		"types/**/*.d.ts",
 		"types/**/*.ts",
-		"build/**/*.ts",
-		"build/**/*.d.ts",
 		"mock/**/*.ts",
-		"webpack.config.common.ts",
-		"src/settings/dist/theme.js",
-		"src/tools.js"
+		"types/*.d.ts"
 	]
 }

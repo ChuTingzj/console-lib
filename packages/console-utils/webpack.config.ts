@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import type { Configuration } from 'webpack';
+import packageJson from './package.json';
 module.exports = () => {
   return {
     target: 'node',
@@ -11,7 +12,7 @@ module.exports = () => {
       path: resolve(__dirname, './dist'),
       filename: 'index.js',
       library: {
-        name: '@console/utils',
+        name: packageJson.name,
         type: 'umd'
       }
     },
@@ -31,7 +32,9 @@ module.exports = () => {
               loader: 'babel-loader',
               options: {
                 presets: ['@babel/preset-env', '@babel/preset-typescript'],
-                plugins: ['@babel/plugin-transform-typescript']
+                plugins: ['@babel/plugin-transform-typescript'],
+                cacheCompression: false,
+                cacheDirectory: resolve(__dirname, './node_modules/.cache/babel-loader')
               }
             },
             {
