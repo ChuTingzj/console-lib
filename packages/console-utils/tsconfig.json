@@ -57,7 +57,7 @@
 		//跳过所有.d类型检查。ts文件。
 		"skipLibCheck": true
 	},
-	"exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js"],
+	"exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js", "src/**/__test__"],
 	"include": [
 		"tests/**/*.ts",
 		"src/**/*.ts",

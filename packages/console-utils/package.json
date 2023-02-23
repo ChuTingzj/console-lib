@@ -6,6 +6,7 @@
 	"files": [
 		"dist"
 	],
+	"types": "./dist/index.d.ts",
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
@@ -23,31 +24,23 @@
 		"email": "zhangjing1024798@gmail.com",
 		"name": "zhangjing"
 	},
+	"engines": {
+		"node": ">=14.17.6"
+	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
 	],
-	"engines": {
-		"node": ">=14.17.6"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.20.12",
 		"@babel/plugin-transform-typescript": "^7.20.13",
 		"@babel/preset-env": "^7.20.2",
 		"@babel/preset-typescript": "^7.18.6",
-		"@types/gulp": "^4.0.10",
 		"@types/webpack": "^5.28.0",
-		"@types/node": "^18.13.0",
 		"babel-loader": "^9.1.2",
-		"compression-webpack-plugin": "^10.0.0",
-		"gulp": "^4.0.2",
-		"terser-webpack-plugin": "^5.3.6",
-		"thread-loader": "^3.0.4",
 		"ts-loader": "^9.4.2",
-		"ts-node": "^10.9.1",
 		"webpack": "^5.75.0",
 		"webpack-bundle-analyzer": "^4.8.0",
-		"webpack-cli": "^5.0.1",
-		"typescript": "^4.9.5"
+		"webpack-cli": "^5.0.1"
 	}
 }
