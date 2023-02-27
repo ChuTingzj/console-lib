@@ -1,6 +1,7 @@
 import {resolve} from 'path';
 import type {Configuration} from 'webpack';
 import packageJson from './package.json';
+import {ClearFlagWebpackPlugin} from './';
 module.exports = () => {
 	return {
 		target: 'node',
@@ -22,6 +23,7 @@ module.exports = () => {
 			},
 			extensions: ['.ts', '.d.ts', '...'],
 		},
+		plugins: [new ClearFlagWebpackPlugin({flag: 'console'})],
 		module: {
 			rules: [
 				{
