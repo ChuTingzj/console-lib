@@ -9,6 +9,8 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"esModuleInterop": true,
+		"declaration": true,
+		"declarationDir": "./dist",
 		"emitDeclarationOnly": false,
 		"lib": ["ESNext", "DOM"],
 		"skipLibCheck": true,

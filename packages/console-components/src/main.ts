@@ -1,5 +1,4 @@
 import typescriptLogo from './typescript.svg';
-
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
