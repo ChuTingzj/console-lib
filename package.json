@@ -5,15 +5,13 @@
 	"scripts": {
 		"clear": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
 		"commit": "git add . && pnpm cz",
-		"version": "pnpm changeset version",
-		"publish": "pnpm changeset publish",
 		"postinstall": "pnpx husky install",
 		"preinstall": "pnpx only-allow pnpm",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"build": "pnpm --filter=@console1024/* run build",
-		"release": "pnpm changeset && pnpm version && pnpm build && pnpm publish --filter=@console1024/*"
+		"release": "pnpm changeset && pnpm changeset version && pnpm build && pnpm changeset publish --filter=@console1024/*"
 	},
 	"keywords": [],
 	"author": {
