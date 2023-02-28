@@ -1,7 +1,6 @@
 {
 	"name": "@console1024/components",
 	"version": "1.0.0",
-	"type": "module",
 	"files": [
 		"dist"
 	],
@@ -19,21 +18,17 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "tsc --noEmit && vite build && pnpm run build:types",
+		"build:types": "ts-node scripts/buildTypes.ts",
 		"test": "vitest",
 		"coverage": "vitest run --coverage"
 	},
 	"peerDependencies": {
-		"vue": ">=3.2.47",
 		"react": ">=18.2.0",
-		"react-dom": ">=18.2.0",
-		"solid-js": ">=1.6.4"
+		"react-dom": ">=18.2.0"
 	},
 	"devDependencies": {
 		"vite": "^4.0.4",
-		"@vitejs/plugin-vue": "^4.0.0",
-		"vue": "^3.2.47",
-		"vue-tsc": "^1.1.7",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"@types/react": "^18.0.27",
@@ -43,8 +38,6 @@
 		"@unocss/preset-uno": "^0.50.1",
 		"@unocss/reset": "^0.50.1",
 		"@unocss/transformer-directives": "^0.50.1",
-		"solid-js": "^1.6.4",
-		"vite-plugin-solid": "^2.5.0",
 		"unocss": "^0.50.1"
 	}
 }

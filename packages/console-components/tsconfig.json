@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
-		"module": "ESNext",
+		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"strict": true,
 		"jsx": "react-jsx",
@@ -14,19 +14,8 @@
 		"emitDeclarationOnly": false,
 		"lib": ["ESNext", "DOM"],
 		"skipLibCheck": true,
-		"noEmit": true,
 		"types": ["node", "vite/client"]
 	},
-	"include": [
-		"lib/**/**/*.tsx",
-		"lib/**/**/*.vue",
-		"lib/**/*.vue",
-		"lib/**/*.tsx",
-		"lib/*.vue",
-		"lib/*.ts",
-		"lib/*.tsx",
-		"src/*.ts",
-		"src/*.d.ts"
-	],
-	"exclude": ["node_modules"]
+	"include": ["lib/**/*.tsx", "lib/*.ts", "lib/*.tsx", "src/vite-env.d.ts"],
+	"exclude": ["node_modules", "scripts/*.ts", "src/*.ts", "src/*.d.ts"]
 }
