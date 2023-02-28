@@ -6,17 +6,10 @@ import glob from 'fast-glob';
 	const sourceFiles: Array<SourceFile> = [];
 	const files = await glob(['lib/*.ts', 'lib/**/*.tsx']);
 	const project = new Project({
-		compilerOptions: {
-			declaration: true,
-			emitDeclarationOnly: true,
-			noEmitOnError: true,
-			allowJs: true,
-			outDir: './dist',
-		},
 		tsConfigFilePath: resolve(__dirname, '../tsconfig.json'),
 		skipAddingFilesFromTsConfig: true,
 	});
-	Promise.all(
+	await Promise.all(
 		files.map(async (file) => {
 			sourceFiles.push(project.addSourceFileAtPath(file));
 		})

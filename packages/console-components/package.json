@@ -6,6 +6,7 @@
 	],
 	"main": "./dist/index.umd.cjs",
 	"module": "./dist/index.js",
+	"type": "module",
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
@@ -18,7 +19,7 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc --noEmit && vite build && pnpm run build:types",
+		"build": "tsc --noEmit && vite build",
 		"build:types": "ts-node scripts/buildTypes.ts",
 		"test": "vitest",
 		"coverage": "vitest run --coverage"
