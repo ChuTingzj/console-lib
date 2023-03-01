@@ -78,7 +78,7 @@ export class ClearFlagWebpackPlugin {
 	clear(compilation: Compilation, source: Compilation['assets']['source'], name: string) {
 		let newSource = '';
 		this.regs.forEach((reg) => {
-			newSource = (!!newSource ? newSource : source.source().toString('utf8')).replaceAll(reg, ' ');
+			newSource = (!!newSource ? newSource : source.source().toString('utf8')).replaceAll(reg, '');
 		});
 
 		compilation.assets[name] = {

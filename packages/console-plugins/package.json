@@ -1,6 +1,6 @@
 {
 	"name": "@console1024/plugins",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"main": "./dist/index.js",
 	"files": [
 		"dist"
@@ -20,7 +20,7 @@
 		"name": "zhangjing"
 	},
 	"engines": {
-		"node": ">=14.17.6"
+		"node": ">=15"
 	},
 	"browserslist": [
 		"> 1%",
