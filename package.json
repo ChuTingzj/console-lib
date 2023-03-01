@@ -11,7 +11,7 @@
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"build": "pnpm --filter=@console1024/plugins run build",
-		"release": "pnpm changeset && pnpm changeset version && pnpm build && pnpm changeset publish --filter=@console1024/*"
+		"release": "pnpm changeset && pnpm changeset version && pnpm build && pnpm changeset publish --filter=@console1024/plugins"
 	},
 	"keywords": [],
 	"author": {
