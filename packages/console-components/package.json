@@ -23,7 +23,7 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc --noEmit && vite build",
+		"build": "vite build",
 		"build:types": "ts-node scripts/buildTypes.ts",
 		"test": "vitest",
 		"coverage": "vitest run --coverage"

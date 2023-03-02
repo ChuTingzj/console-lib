@@ -1,5 +1,11 @@
 # @console1024/plugins
 
+## 3.0.6
+
+### Patch Changes
+
+- better
+
 ## 3.0.5
 
 ### Patch Changes
