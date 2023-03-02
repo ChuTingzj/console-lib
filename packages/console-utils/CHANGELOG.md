@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.0.7
+
+### Patch Changes
+
+- style
+
 ## 3.0.6
 
 ### Patch Changes
