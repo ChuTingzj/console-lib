@@ -11,6 +11,10 @@
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-components"
+	},
 	"exports": {
 		".": {
 			"import": "./dist/index.js",

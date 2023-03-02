@@ -6,6 +6,10 @@
 		"dist"
 	],
 	"types": "./dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-utils"
+	},
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"

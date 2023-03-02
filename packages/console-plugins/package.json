@@ -1,11 +1,15 @@
 {
 	"name": "@console1024/plugins",
-	"version": "3.0.4",
+	"version": "3.0.5",
 	"main": "./dist/index.js",
 	"files": [
 		"dist"
 	],
 	"types": "./dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-plugins"
+	},
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"

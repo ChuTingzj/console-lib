@@ -14,10 +14,13 @@ pnpm i @console1024/plugins -D
 
 #### clear-flag-webpack-plugin
 
-A plugin can clear some flags(you provide) in production environment
++ A plugin can clear some flags(you provide) in production environment
+
 **Options**
 
-+ flags(string|string[])
+```typescript
+flags:'console'|'alert'|'confirm'|'prompt'|'debugger'|Array<'console'|'alert'|'confirm'|'prompt'|'debugger'>
+```
 
 **Usage**
 

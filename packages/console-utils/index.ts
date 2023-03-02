@@ -10,3 +10,6 @@ export * from './src/isAsyncFunction';
 export * from './src/microRun';
 export * from './src/singleInstance';
 export * from './src/upload';
+export * from './src/deDuplicate';
+export * from './src/request';
+export * from './src/copy';
