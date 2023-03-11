@@ -1,0 +1,18 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"test:watch": {
+			"cache": false,
+			"persistent": true
+		},
+		"build": {
+			"outputs": ["dist/**"]
+		},
+		"clear": {
+			"cache": false
+		},
+		"clear:module": {
+			"cache": false
+		}
+	}
+}

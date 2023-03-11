@@ -6,16 +6,21 @@
 		"moduleResolution": "Node",
 		"strict": true,
 		"jsx": "react-jsx",
+		"jsxImportSource": "react",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"declaration": true,
 		"declarationDir": "./dist",
 		"emitDeclarationOnly": false,
-		"lib": ["ESNext", "DOM"],
+		"lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
 		"skipLibCheck": true,
-		"types": ["node", "vite/client"]
+		"types": ["node","vitest","vite/client"],
+		"typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+		"paths": {
+			"@/*": ["lib/*"]
+		}
 	},
-	"include": ["lib/**/*.tsx", "lib/*.ts", "lib/*.tsx", "src/vite-env.d.ts"],
-	"exclude": ["node_modules", "scripts/*.ts", "src/*.ts", "src/*.d.ts"]
+	"include": ["lib", "src/vite-env.d.ts"],
+	"exclude": ["node_modules", "src/**/__test__", "dist"]
 }

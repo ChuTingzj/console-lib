@@ -1,6 +1,6 @@
 {
-	"name": "@console1024/plugins",
-	"version": "3.0.8",
+	"name": "@console1024/loaders",
+	"version": "1.0.0",
 	"main": "./dist/index.js",
 	"files": [
 		"dist"
@@ -8,7 +8,7 @@
 	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-plugins"
+		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-loaders"
 	},
 	"publishConfig": {
 		"access": "public",

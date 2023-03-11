@@ -1,0 +1,23 @@
+{
+	"name": "@console1024/animations",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-animations"
+	},
+	"scripts": {
+		"clear": "rimraf ./dist",
+		"clear:module": "rimraf ./node_modules"
+	},
+	"keywords": [],
+	"author": ""
+}

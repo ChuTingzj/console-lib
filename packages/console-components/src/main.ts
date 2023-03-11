@@ -1,3 +1,4 @@
+/// <reference types="./vite-env.d.ts"/>
 import typescriptLogo from './typescript.svg';
 import 'uno.css';
 import '@unocss/reset/normalize.css';

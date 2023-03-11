@@ -27,10 +27,10 @@ describe('deDuplicate', () => {
 		expect(deDuplicate([undefined, undefined])).toStrictEqual([undefined]);
 	});
 	it('pure two-dimension arr', () => {
-		expect(deDuplicate([['a', 'b'], ['a', 'b'], ['a']])).toContainEqual(['a']);
+		expect(deDuplicate([['a', 'b'], ['a', 'b'], ['a']])).toHaveLength(2);
 	});
 	it('pure object arr', () => {
-		expect(deDuplicate([{a: 1, b: 2}, {a: 1, b: 2}, {a: 1}])).toContainEqual({a: 1});
+		expect(deDuplicate([{a: 1, b: 2}, {a: 1, b: 2}, {a: 1}])).toHaveLength(2);
 	});
 	it('pure Map arr', () => {
 		expect(deDuplicate([new Map([['a', 1]]), new Map([['a', 1]])])).toHaveLength(1);
@@ -41,6 +41,16 @@ describe('deDuplicate', () => {
 	it('mix arr', () => {
 		expect(
 			deDuplicate([
+				false,
+				true,
+				null,
+				null,
+				undefined,
+				undefined,
+				{},
+				{},
+				function a() {},
+				function a() {},
 				new Set([1]),
 				new Set([1]),
 				new Set([2]),
@@ -54,16 +64,6 @@ describe('deDuplicate', () => {
 				2,
 				3,
 				false,
-				false,
-				true,
-				null,
-				null,
-				undefined,
-				undefined,
-				{},
-				{},
-				function a() {},
-				function a() {},
 			])
 		).toHaveLength(16);
 	});

@@ -13,3 +13,7 @@ export * from './src/upload';
 export * from './src/deDuplicate';
 export * from './src/request';
 export * from './src/copy';
+export * from './src/domIterator';
+export * from './src/voice';
+export * from './src/SuperTask';
+export * from './src/equal';

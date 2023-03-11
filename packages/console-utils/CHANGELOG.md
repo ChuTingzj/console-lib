@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.0.8
+
+### Patch Changes
+
+- reduce
+
 ## 3.0.7
 
 ### Patch Changes

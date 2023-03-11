@@ -11,6 +11,7 @@ import {
 	isFunction,
 	isSet,
 } from '../is';
+import {equal} from '../equal';
 export const deDuplicate = (args: Array<any>) => {
 	if (args.length === 0) return args;
 	const result: Array<any> = [];
@@ -29,7 +30,7 @@ export const deDuplicate = (args: Array<any>) => {
 			if (!filter.length) {
 				result.push(item);
 			} else {
-				const index = filter.findIndex((self) => JSON.stringify(self) === JSON.stringify(item));
+				const index = filter.findIndex((self) => equal(self, item) ?? true);
 				if (index === -1) {
 					result.push(item);
 				}

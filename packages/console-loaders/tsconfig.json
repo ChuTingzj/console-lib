@@ -20,7 +20,7 @@
 		//指定多个类似于' ./node_modules/@types '的文件夹。
 		"typeRoots": ["./node_modules/@types/", "./types", "../../node_modules/@types"],
 		//指定要包含而不被源文件引用的类型包名称。
-		"types": ["node", "webpack/module"],
+		"types": ["node"],
 		//启用导入.json文件
 		"resolveJsonModule": true,
 
@@ -58,5 +58,17 @@
 		"skipLibCheck": true
 	},
 	"exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js", "src/**/__test__"],
-	"include": ["src", "./.d.ts"]
+	"include": [
+		"tests/**/*.ts",
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/*.ts",
+		"src/*.d.ts",
+		"types/**/*.d.ts",
+		"types/**/*.ts",
+		"mock/**/*.ts",
+		"types/*.d.ts",
+		"./index.ts",
+		"./.d.ts"
+	]
 }

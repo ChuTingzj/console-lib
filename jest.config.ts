@@ -13,7 +13,7 @@ const config: Config = {
 	testEnvironment: 'node',
 	testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '/dist/'],
 	moduleNameMapper: {
-		'@/(.*)': '<rootDir>/console-utils/src/$1',
+		'@/(.*)': '<rootDir>/**/(src|lib)/$1',
 	},
 };
 export default config;

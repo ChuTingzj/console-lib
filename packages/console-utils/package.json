@@ -1,6 +1,6 @@
 {
 	"name": "@console1024/utils",
-	"version": "3.0.7",
+	"version": "3.0.8",
 	"main": "dist/index.js",
 	"files": [
 		"dist"
@@ -15,7 +15,11 @@
 		"registry": "https://registry.npmjs.org/"
 	},
 	"scripts": {
+		"clear": "rimraf ./dist",
+		"clear:module": "rimraf ./node_modules",
 		"preinstall": "pnpx only-allow pnpm",
+		"test": "jest --coverage",
+		"test:watch": "jest --watch --coverage",
 		"build": "webpack --progress",
 		"build:analyze": "webpack --progress --analyze"
 	},

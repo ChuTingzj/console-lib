@@ -23,11 +23,13 @@
 		}
 	},
 	"scripts": {
+		"clear": "rimraf ./dist",
+		"clear:module": "rimraf ./node_modules",
 		"dev": "vite",
 		"build": "vite build",
 		"build:types": "ts-node scripts/buildTypes.ts",
-		"test": "vitest",
-		"coverage": "vitest run --coverage"
+		"test": "vitest run --coverage",
+		"test:watch": "vitest --coverage"
 	},
 	"peerDependencies": {
 		"react": ">=18.2.0",

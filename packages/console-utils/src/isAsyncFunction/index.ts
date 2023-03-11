@@ -1,3 +1,1 @@
-export const isAsyncFunction = (fn: Function) => {
-	return fn.prototype[Symbol.toStringTag] === 'AsyncFunction';
-};
+export const isAsyncFunction = (fn: any) => fn[Symbol.toStringTag] === 'AsyncFunction';
