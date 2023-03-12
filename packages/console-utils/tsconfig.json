@@ -12,7 +12,7 @@
 		/* Modules */
 		"module": "CommonJS" /* Specify what module code is generated. */,
 		//指定TypeScript如何从给定的模块说明符中查找文件。
-		"moduleResolution": "Node",
+		"moduleResolution": "nodenext",
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]

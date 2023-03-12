@@ -1,6 +1,6 @@
 {
 	"name": "@console1024/utils",
-	"version": "3.0.9",
+	"version": "3.0.10",
 	"main": "dist/index.js",
 	"files": [
 		"dist"
@@ -17,9 +17,10 @@
 	"scripts": {
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
+		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/**",
 		"preinstall": "pnpx only-allow pnpm",
-		"test": "jest --coverage",
-		"test:watch": "jest --watch --coverage",
+		"test": "pnpm jest index.test.ts --coverage",
+		"test:watch": "pnpm jest index.test.ts --watch --coverage",
 		"build": "webpack --progress",
 		"build:analyze": "webpack --progress --analyze"
 	},

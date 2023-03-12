@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.0.10
+
+### Patch Changes
+
+- fix deduplicate
+
 ## 3.0.9
 
 ### Patch Changes

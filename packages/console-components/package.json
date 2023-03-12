@@ -25,6 +25,7 @@
 	"scripts": {
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
+		"lint": "pnpm eslint -c ../../.eslintrc.js --fix lib/**",
 		"dev": "vite",
 		"build": "vite build",
 		"build:types": "ts-node scripts/buildTypes.ts",

@@ -1,6 +1,7 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
 	plugins: ['@typescript-eslint'],
+	extends: ['prettier'],
 	rules: {
 		'no-var': 'error', // 不能使用var声明变量
 		'no-extra-semi': 'error',
