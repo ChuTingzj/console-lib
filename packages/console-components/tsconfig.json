@@ -15,10 +15,10 @@
 		"emitDeclarationOnly": false,
 		"lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
 		"skipLibCheck": true,
-		"types": ["node","vitest","vite/client"],
+		"types": ["node", "vitest", "vite/client"],
 		"typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
 		"paths": {
-			"@/*": ["lib/*"]
+			"@/*": ["../../packages/*"]
 		}
 	},
 	"include": ["lib", "src/vite-env.d.ts"],

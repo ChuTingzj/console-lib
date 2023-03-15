@@ -1,4 +1,4 @@
-import {microRun} from '@/microRun';
+import {microRun} from '@/console-utils/src/microRun';
 export const forDom = (
 	selector: keyof HTMLElementTagNameMap,
 	whatToShow: number,

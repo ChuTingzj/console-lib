@@ -1,8 +1,10 @@
 import {resolve} from 'path';
 import type {Configuration} from 'webpack';
+import {merge} from 'webpack-merge';
+import {common} from '../../config/webpack.common';
 import packageJson from './package.json';
 module.exports = () => {
-	return {
+	return merge<Configuration>(common, {
 		target: 'node',
 		mode: 'production',
 		entry: resolve(__dirname, './index.ts'),
@@ -15,12 +17,6 @@ module.exports = () => {
 				name: packageJson.name,
 				type: 'umd',
 			},
-		},
-		resolve: {
-			alias: {
-				'@': resolve(__dirname, './src'),
-			},
-			extensions: ['.ts', '.d.ts', '...'],
 		},
 		module: {
 			rules: [
@@ -44,5 +40,5 @@ module.exports = () => {
 				},
 			],
 		},
-	} satisfies Configuration;
+	});
 };

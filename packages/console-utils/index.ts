@@ -17,3 +17,4 @@ export * from './src/domIterator';
 export * from './src/voice';
 export * from './src/SuperTask';
 export * from './src/equal';
+export * from './src/toBase64';

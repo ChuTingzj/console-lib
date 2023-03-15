@@ -11,7 +11,7 @@ import {
 	isString,
 	isSymbol,
 	isUndefined,
-} from '@/is';
+} from '@/console-utils/src/is';
 export const shallowCopy = <T = any>(variable: T): T => {
 	if (isObject(variable)) {
 		const keys = Reflect.ownKeys(variable);

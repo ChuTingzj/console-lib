@@ -9,6 +9,7 @@ const config: JestConfigWithTsJest = {
 	collectCoverageFrom: ['**/*.(t|j)s'],
 	testEnvironment: 'node',
 	testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '/dist/'],
+	projects: ['packages/console-utils/*'],
 	preset: 'ts-jest/presets/default-esm',
 	transformIgnorePatterns: ['^.+\\.js$'],
 	moduleNameMapper: {

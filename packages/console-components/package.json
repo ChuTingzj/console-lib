@@ -28,9 +28,7 @@
 		"lint": "pnpm eslint -c ../../.eslintrc.js --fix lib/**",
 		"dev": "vite",
 		"build": "vite build",
-		"build:types": "ts-node scripts/buildTypes.ts",
-		"test": "vitest run --coverage",
-		"test:watch": "vitest --coverage"
+		"build:types": "ts-node scripts/buildTypes.ts"
 	},
 	"peerDependencies": {
 		"react": ">=18.2.0",

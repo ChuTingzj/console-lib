@@ -15,7 +15,7 @@
 		"moduleResolution": "nodenext",
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": ["../../packages/*"]
 		},
 		//指定多个类似于' ./node_modules/@types '的文件夹。
 		"typeRoots": ["./node_modules/@types", "./types", "../../node_modules/@types"],
