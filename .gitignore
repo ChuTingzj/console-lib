@@ -5,6 +5,7 @@ coverage
 .vscode
 .idea
 .fleet
+.pnpm-store
 
 # Logs
 logs

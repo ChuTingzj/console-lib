@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.1.0
+
+### Minor Changes
+
+- fix
+
 ## 3.0.10
 
 ### Patch Changes

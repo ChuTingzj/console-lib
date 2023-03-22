@@ -18,7 +18,6 @@
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
 		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/**",
-		"preinstall": "pnpx only-allow pnpm",
 		"build": "webpack --progress",
 		"build:analyze": "webpack --progress --analyze"
 	},

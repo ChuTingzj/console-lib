@@ -1,4 +1,4 @@
-import type {Compiler, Compilation} from 'webpack';
+import type { Compiler, Compilation } from 'webpack';
 export enum EFlagTypes {
 	'console',
 	'alert',
@@ -84,7 +84,7 @@ export class ClearFlagWebpackPlugin {
 			source: () => newSource,
 			size: () => Buffer.byteLength(newSource),
 			buffer: () => Buffer.from(newSource),
-			sourceAndMap: () => ({source: newSource, map: source.map()}),
+			sourceAndMap: () => ({ source: newSource, map: source.map()! }),
 			map: () => source.map(),
 			updateHash: source.updateHash,
 		};
