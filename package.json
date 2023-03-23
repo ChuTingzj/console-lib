@@ -9,7 +9,6 @@
 		"clear:module": "rimraf ./node_modules",
 		"commit": "pnpm lint && git add . && pnpm cz",
 		"postinstall": "pnpx husky install",
-		"preinstall": "pnpx only-allow pnpm",
 		"test-vitest": "pnpm vitest run --coverage",
 		"test-vitest:watch": "pnpm vitest --coverage",
 		"test": "pnpm jest --coverage",
