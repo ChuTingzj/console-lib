@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.1.1
+
+### Patch Changes
+
+- allow more pm
+
 ## 3.1.0
 
 ### Minor Changes

@@ -20,7 +20,7 @@
 		//指定多个类似于' ./node_modules/@types '的文件夹。
 		"typeRoots": ["./node_modules/@types", "./types", "../../node_modules/@types"],
 		//指定要包含而不被源文件引用的类型包名称。
-		"types": ["node", "webpack/module"],
+		"types": ["node"],
 		//启用导入.json文件
 		"resolveJsonModule": true,
 
@@ -52,7 +52,7 @@
 		"noUnusedLocals": true /* Enable error reporting when a local variables aren't read. */,
 		//未读取函数参数时引发错误
 		"noUnusedParameters": true,
-
+		"importHelpers": true,
 		/* Completeness */
 		//跳过所有.d类型检查。ts文件。
 		"skipLibCheck": true
