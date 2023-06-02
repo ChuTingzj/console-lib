@@ -13,7 +13,8 @@
 		"test-vitest:watch": "pnpm vitest --coverage",
 		"test": "pnpm jest --coverage",
 		"test:watch": "pnpm jest --watch --coverage",
-		"release": "pnpm changeset && pnpm changeset version && pnpm build && pnpm changeset publish"
+		"release": "pnpm changeset && pnpm changeset version && pnpm build && pnpm changeset publish",
+		"release:nobuild":"pnpm changeset && pnpm changeset version && pnpm changeset publish"
 	},
 	"author": {
 		"email": "zhangjing1024798@gmail.com",
