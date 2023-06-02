@@ -7,12 +7,12 @@ module.exports = () => {
 	return merge<Configuration>(common, {
 		mode: 'production',
 		entry: resolve(__dirname, './index.ts'),
-    target:'node',
+		target:'node',
 		output: {
 			publicPath: '/',
 			clean: true,
 			filename: 'index.js',
-      path: resolve(__dirname, './dist/'),
+		  path: resolve(__dirname, './dist/cjs'),
 			library: {
 				name: packageJson.name,
 				type: 'umd',

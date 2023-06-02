@@ -2,16 +2,23 @@ import {resolve} from 'path';
 import type {Configuration} from 'webpack';
 import {merge} from 'webpack-merge';
 import {common} from '../../config/webpack.common';
+import {readdir} from 'node:fs/promises';
 module.exports = () => {
 	return merge<Configuration>(common, {
 		target:'web',
 		mode: 'production',
-		entry: resolve(__dirname, './index.ts'),
+		entry: ()=>readdir(resolve(__dirname,'./src')).then(res=>{
+			const entry = {};
+			for (const dir of res) {
+				if(dir==='index.js')continue;
+				Reflect.set(entry,dir,{import:`${resolve(__dirname,'./src')}/${dir}/index.ts`,filename:`${dir}/index.js`});
+			}
+			return entry;
+		}),
 		output: {
 			publicPath: '/',
 			clean: true,
 			path: resolve(__dirname, './dist/esm'),
-			filename: 'index.js',
 			library: {
 				type: 'module',
 			},
