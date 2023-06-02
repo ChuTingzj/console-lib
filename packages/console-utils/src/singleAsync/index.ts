@@ -53,3 +53,4 @@ export const run = (fn: () => void) => {
 		}
 	}
 };
+export default run;

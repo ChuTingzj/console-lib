@@ -9,3 +9,4 @@ export const textToVoice = (text: string, options: Partial<SpeechSynthesisUttera
 	});
 	speechSynthesis.speak(utterance);
 };
+export default textToVoice;

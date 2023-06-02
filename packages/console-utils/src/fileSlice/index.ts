@@ -1,12 +1,12 @@
 import SparkMD5 from 'spark-md5';
-const fileSlice = (file: File, interval: number) => {
+export const fileSlice = (file: File, interval: number) => {
 	const chunks: Array<Blob> = [];
 	for (let i = 0; i < file.size; i += interval) {
 		chunks.push(file.slice(i, i + interval + 1));
 	}
 	return chunks;
 };
-const getFileHash = (chunks: Array<Blob>) => {
+export const getFileHash = (chunks: Array<Blob>) => {
 	return new Promise<string>((resolve) => {
 		const spark = new SparkMD5();
 		const read = (index: number) => {
@@ -25,4 +25,4 @@ const getFileHash = (chunks: Array<Blob>) => {
 		};
 	});
 };
-export {fileSlice, getFileHash};
+export default {fileSlice, getFileHash};

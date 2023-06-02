@@ -52,3 +52,4 @@ export const request = <T extends keyof typeof EAjaxType, Y>(
 			});
 	}
 };
+export default request;

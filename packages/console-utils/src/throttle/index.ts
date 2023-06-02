@@ -9,3 +9,4 @@ export function throttle(fn: () => void, delay = 200) {
     }, delay);
   };
 }
+export default throttle;

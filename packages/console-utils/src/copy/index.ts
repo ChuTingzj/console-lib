@@ -113,3 +113,7 @@ export const deepCopy = <T = any>(variable: T): T => {
 	}
 	return variable;
 };
+export default {
+	shallowCopy,
+	deepCopy
+};

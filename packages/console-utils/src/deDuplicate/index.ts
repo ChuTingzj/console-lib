@@ -52,3 +52,4 @@ export const deDuplicate = (args: Array<any>) => {
 	}
 	return result;
 };
+export default deDuplicate;

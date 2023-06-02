@@ -9,3 +9,4 @@ export function debounce(fn: () => void, delay = 500) {
     }, delay);
   };
 }
+export default debounce;

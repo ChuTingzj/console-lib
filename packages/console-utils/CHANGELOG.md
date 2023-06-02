@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.2.2
+
+### Patch Changes
+
+- export
+
 ## 3.2.1
 
 ### Patch Changes

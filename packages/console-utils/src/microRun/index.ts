@@ -14,3 +14,4 @@ export const microRun = (fn: () => void) => {
 		setTimeout(fn);
 	}
 };
+export default microRun;

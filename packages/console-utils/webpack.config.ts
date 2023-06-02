@@ -14,7 +14,6 @@ module.exports = () => {
 			filename: 'index.js',
 			library: {
 				type: 'module',
-				export:'default'
 			},
 		},
 		module: {

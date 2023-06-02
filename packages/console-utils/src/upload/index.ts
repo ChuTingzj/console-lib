@@ -77,3 +77,4 @@ export const uploadByXhr = <T extends keyof typeof EUploadType>(
 		}
 	};
 };
+export default uploadByXhr;

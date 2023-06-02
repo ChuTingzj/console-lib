@@ -4,3 +4,4 @@ export const getWorkSpace = () => {
   if (firstNodeModulesIndex === -1) return process.cwd();
   return absoluteArr.slice(0, firstNodeModulesIndex).join('\\');
 };
+export default getWorkSpace;

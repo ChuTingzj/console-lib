@@ -22,3 +22,4 @@ export const forDom = (
 	});
 	return nodeArr;
 };
+export default forDom;

@@ -10,3 +10,4 @@ export const singleInstance = (fn: new (...args: Array<any>) => object) => {
 		},
 	});
 };
+export default singleInstance;

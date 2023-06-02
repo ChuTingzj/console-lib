@@ -43,3 +43,18 @@ export const isComplex = (variable: any): variable is object =>
 	isMap(variable) ||
 	isSet(variable) ||
 	isObject(variable);
+export default {
+	getVariableType,
+	isArray,
+	isString,
+	isNumber,
+	isBoolean,
+	isNull,
+	isUndefined,
+	isSet,
+	isMap,
+	isSymbol,
+	isObject,
+	isFunction,
+	isComplex
+};
