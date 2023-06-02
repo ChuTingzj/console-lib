@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.2.0
+
+### Minor Changes
+
+- support esm
+
 ## 3.1.2
 
 ### Patch Changes

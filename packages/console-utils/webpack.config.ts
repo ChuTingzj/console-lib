@@ -4,6 +4,7 @@ import {merge} from 'webpack-merge';
 import {common} from '../../config/webpack.common';
 module.exports = () => {
 	return merge<Configuration>(common, {
+		target:'web',
 		mode: 'production',
 		entry: resolve(__dirname, './index.ts'),
 		output: {
@@ -39,6 +40,8 @@ module.exports = () => {
 		},
 		experiments:{
 			outputModule:true
-		}
+		},
+		externals: 'spark-md5',
+		externalsType:'module'
 	});
 };

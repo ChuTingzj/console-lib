@@ -1,7 +1,8 @@
 {
 	"name": "@console1024/utils",
-	"version": "3.1.2",
-	"main": "dist/esm/index.js",
+	"version": "3.2.0",
+	"main": "dist/index.js",
+	"module":"dist/esm/index.js",
 	"files": [
 		"dist"
 	],
@@ -18,9 +19,9 @@
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
 		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/**/*.ts",
-		"build:es":"webpack --progress",
-		"build:cjs":"webpack --config webpack.config.node.ts --progress",
-		"build": "pnpm build:es && pnpm build:cjs",
+		"build:es": "webpack --progress",
+		"build:cjs": "webpack --config webpack.config.node.ts --progress",
+		"build": "pnpm build:cjs && pnpm build:es",
 		"build:analyze": "webpack --progress --analyze"
 	},
 	"keywords": [
@@ -39,9 +40,7 @@
 		"last 2 versions"
 	],
 	"devDependencies": {
-		"@types/spark-md5": "^3.0.2"
-	},
-	"dependencies": {
+		"@types/spark-md5": "^3.0.2",
 		"spark-md5": "^3.0.2"
 	},
 	"peerDependencies": {

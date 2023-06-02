@@ -12,7 +12,7 @@ module.exports = () => {
 			publicPath: '/',
 			clean: true,
 			filename: 'index.js',
-      path: resolve(__dirname, './dist/cjs'),
+      path: resolve(__dirname, './dist/'),
 			library: {
 				name: packageJson.name,
 				type: 'umd',
@@ -35,13 +35,21 @@ module.exports = () => {
 						},
 						{
 							loader: 'ts-loader',
-              options:{
-                configFile:'tsconfig.node.json'
-              }
+							options:{
+								configFile:'tsconfig.node.json'
+							}
 						},
 					],
 				},
 			],
+		},
+		externals: {
+			'spark-md5': {
+				commonjs: 'spark-md5',
+				commonjs2: 'spark-md5',
+				amd: 'spark-md5',
+				root: '_',
+			},
 		},
 	});
 };
