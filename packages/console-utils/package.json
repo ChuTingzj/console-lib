@@ -1,7 +1,7 @@
 {
 	"name": "@console1024/utils",
-	"version": "3.1.1",
-	"main": "dist/index.js",
+	"version": "3.1.2",
+	"main": "dist/esm/index.js",
 	"files": [
 		"dist"
 	],
@@ -18,7 +18,9 @@
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
 		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/**/*.ts",
-		"build": "webpack --progress",
+		"build:es":"webpack --progress",
+		"build:cjs":"webpack --config webpack.config.node.ts --progress",
+		"build": "pnpm build:es && pnpm build:cjs",
 		"build:analyze": "webpack --progress --analyze"
 	},
 	"keywords": [

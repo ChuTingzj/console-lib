@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.1.2
+
+### Patch Changes
+
+- fix: global is not defined
+
 ## 3.1.1
 
 ### Patch Changes

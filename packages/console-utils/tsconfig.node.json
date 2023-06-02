@@ -33,7 +33,7 @@
 		"sourceMap": true,
 		"declaration": true,
 		"emitDeclarationOnly": false,
-		"declarationDir": "./dist/esm",
+		"declarationDir": "./dist/cjs",
 
 		/* Interop Constraints */
 		//当一个模块没有默认导出时，允许'import x from y'。

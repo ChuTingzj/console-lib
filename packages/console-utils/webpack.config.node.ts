@@ -1,18 +1,21 @@
 import {resolve} from 'path';
 import type {Configuration} from 'webpack';
 import {merge} from 'webpack-merge';
+import packageJson from './package.json';
 import {common} from '../../config/webpack.common';
 module.exports = () => {
 	return merge<Configuration>(common, {
 		mode: 'production',
 		entry: resolve(__dirname, './index.ts'),
+    target:'node',
 		output: {
 			publicPath: '/',
 			clean: true,
-			path: resolve(__dirname, './dist/esm'),
 			filename: 'index.js',
+      path: resolve(__dirname, './dist/cjs'),
 			library: {
-				type: 'module',
+				name: packageJson.name,
+				type: 'umd',
 			},
 		},
 		module: {
@@ -32,13 +35,13 @@ module.exports = () => {
 						},
 						{
 							loader: 'ts-loader',
+              options:{
+                configFile:'tsconfig.node.json'
+              }
 						},
 					],
 				},
 			],
 		},
-		experiments:{
-			outputModule:true
-		}
 	});
 };
