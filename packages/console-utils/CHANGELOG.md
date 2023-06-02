@@ -1,5 +1,11 @@
 # @console1024/utils
 
+## 3.2.1
+
+### Patch Changes
+
+- dist
+
 ## 3.2.0
 
 ### Minor Changes
