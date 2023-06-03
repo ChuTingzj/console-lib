@@ -1,5 +1,13 @@
 # @console1024/utils
 
+## 4.0.0
+
+### Patch Changes
+
+- copy-webpack-plugin
+- Updated dependencies
+  - @console1024/plugins@4.0.0
+
 ## 3.2.4
 
 ### Patch Changes

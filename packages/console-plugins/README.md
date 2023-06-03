@@ -34,3 +34,30 @@ module.exports = {
   plugins:[new ClearFlagsWebpackPlugin({flags:'console'})]
 }
 ```
+
+#### copy-webpack-plugin
++ copy some files/directory to your dist directory
++ based on Nodejs `fs` module
+
+**Options**
+```typescript
+patterns: Array<Record<'from' | 'to', string> & {types?: boolean}>;
+```
+
+**Usage**
+```typescript
+//import by ESM
+import {CopyWebpackPlugin} from '@console1024/plugins'
+//or commonjs
+const {CopyWebpackPlugin} = require('@console1024/plugins')
+module.exports = {
+  //...your personal configuration
+  plugins:[new CopyWebpackPlugin({patterns:[
+    {
+      from:resolve(__dirname,'the file or directory you want to copy'),
+      to:resolve(__dirname,'the destination you want to place'),
+      types:true //if you want to generate corresponding .d.ts file
+    }
+  ]})]
+}
+```

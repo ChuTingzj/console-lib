@@ -1,5 +1,11 @@
 # @console1024/plugins
 
+## 4.0.0
+
+### Major Changes
+
+- copy-webpack-plugin
+
 ## 3.0.8
 
 ### Patch Changes
