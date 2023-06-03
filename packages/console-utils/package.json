@@ -1,12 +1,12 @@
 {
 	"name": "@console1024/utils",
-	"version": "3.2.2",
+	"version": "3.2.4",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"files": [
 		"dist"
 	],
-	"types": "./dist/index.d.ts",
+	"types": "./dist/esm/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ChuTingzj/console-lib/tree/master/packages/console-utils"
@@ -18,7 +18,7 @@
 	"scripts": {
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
-		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/**/*.ts",
+		"lint": "pnpm pretty-quick",
 		"build:es": "webpack --progress",
 		"build:cjs": "webpack --config webpack.config.node.ts --progress",
 		"build": "pnpm build:cjs && pnpm build:es",
@@ -45,5 +45,8 @@
 	},
 	"peerDependencies": {
 		"spark-md5": ">=3.0.2"
+	},
+	"dependencies": {
+		"@console1024/plugins": "workspace:*"
 	}
 }

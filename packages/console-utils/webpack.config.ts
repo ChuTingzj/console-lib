@@ -3,18 +3,23 @@ import type {Configuration} from 'webpack';
 import {merge} from 'webpack-merge';
 import {common} from '../../config/webpack.common';
 import {readdir} from 'node:fs/promises';
+import {CopyWebpackPlugin} from '@console1024/plugins/src/CopyWebpackPlugin';
 module.exports = () => {
 	return merge<Configuration>(common, {
-		target:'web',
+		target: 'web',
 		mode: 'production',
-		entry: ()=>readdir(resolve(__dirname,'./src')).then(res=>{
-			const entry = {};
-			for (const dir of res) {
-				if(dir==='index.js')continue;
-				Reflect.set(entry,dir,{import:`${resolve(__dirname,'./src')}/${dir}/index.ts`,filename:`${dir}/index.js`});
-			}
-			return entry;
-		}),
+		entry: () =>
+			readdir(resolve(__dirname, './src')).then((res) => {
+				const entry = {};
+				for (const dir of res) {
+					if (dir === 'index.js') continue;
+					Reflect.set(entry, dir, {
+						import: `${resolve(__dirname, './src')}/${dir}/index.ts`,
+						filename: `${dir}/index.js`,
+					});
+				}
+				return entry;
+			}),
 		output: {
 			publicPath: '/',
 			clean: true,
@@ -45,10 +50,21 @@ module.exports = () => {
 				},
 			],
 		},
-		experiments:{
-			outputModule:true
+		experiments: {
+			outputModule: true,
 		},
 		externals: 'spark-md5',
-		externalsType:'module'
+		externalsType: 'module',
+		plugins: [
+			new CopyWebpackPlugin({
+				patterns: [
+					{
+						from: resolve(__dirname, './src/index.js'),
+						to: resolve(__dirname, './dist/esm/index.js'),
+						types: true,
+					},
+				],
+			}),
+		],
 	});
 };

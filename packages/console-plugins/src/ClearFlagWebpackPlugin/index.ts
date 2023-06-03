@@ -1,4 +1,4 @@
-import type { Compiler, Compilation } from 'webpack';
+import type {Compiler, Compilation} from 'webpack';
 export enum EFlagTypes {
 	'console',
 	'alert',
@@ -6,7 +6,7 @@ export enum EFlagTypes {
 	'prompt',
 	'debugger',
 }
-export type Options = {
+export type ClearFlagWebpackPluginOptions = {
 	flag: keyof typeof EFlagTypes | Array<keyof typeof EFlagTypes>;
 };
 const matchSingleFlag = (flag: keyof typeof EFlagTypes) => {
@@ -49,7 +49,7 @@ const matchSingleFlag = (flag: keyof typeof EFlagTypes) => {
 	}
 	return regs;
 };
-const getMatchRegs = (options: Options) => {
+const getMatchRegs = (options: ClearFlagWebpackPluginOptions) => {
 	const keys = options.flag;
 	let regs: Array<RegExp> = [];
 	if (Array.isArray(keys)) {
@@ -63,7 +63,7 @@ const getMatchRegs = (options: Options) => {
 };
 export class ClearFlagWebpackPlugin {
 	regs: Array<RegExp>;
-	constructor(options: Options) {
+	constructor(options: ClearFlagWebpackPluginOptions) {
 		this.regs = getMatchRegs(options);
 	}
 	apply(compiler: Compiler) {
@@ -84,7 +84,7 @@ export class ClearFlagWebpackPlugin {
 			source: () => newSource,
 			size: () => Buffer.byteLength(newSource),
 			buffer: () => Buffer.from(newSource),
-			sourceAndMap: () => ({ source: newSource, map: source.map()! }),
+			sourceAndMap: () => ({source: newSource, map: source.map()!}),
 			map: () => source.map(),
 			updateHash: source.updateHash,
 		};

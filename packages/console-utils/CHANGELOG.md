@@ -1,5 +1,17 @@
 # @console1024/utils
 
+## 3.2.4
+
+### Patch Changes
+
+- esm
+
+## 3.2.3
+
+### Patch Changes
+
+- esm
+
 ## 3.2.3
 
 ### Patch Changes

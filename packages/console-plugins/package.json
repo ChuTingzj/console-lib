@@ -17,7 +17,7 @@
 	"scripts": {
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
-		"lint": "pnpm eslint -c ../../.eslintrc.js --fix src/*",
+		"lint": "pnpm pretty-quick",
 		"build": "webpack --progress",
 		"build:analyze": "webpack --progress --analyze"
 	},

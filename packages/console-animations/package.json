@@ -17,7 +17,7 @@
 	"scripts": {
 		"clear": "rimraf ./dist",
 		"clear:module": "rimraf ./node_modules",
-		"lint": "pnpm stylelint --config ../../.stylelintrc.json --fix src/*"
+		"lint": "pnpm stylelint \"src/*.{css,scss,sass}\" --config ../../.stylelintrc.json --fix"
 	},
 	"keywords": [],
 	"author": ""

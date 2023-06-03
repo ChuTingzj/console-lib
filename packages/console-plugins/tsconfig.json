@@ -58,5 +58,5 @@
 		"skipLibCheck": true
 	},
 	"exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js", "src/**/__test__"],
-	"include": ["src", "./.d.ts"]
+	"include": ["src/**/*.ts", "./.d.ts"]
 }
